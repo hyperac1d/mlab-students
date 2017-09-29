@@ -59,7 +59,7 @@ app.get('/', (req,res)=>{
 });
 
 app.get('/register', (req, res) => {
-	res.render('regoster.ejs');
+	res.render('register.ejs');
 })
 
 app.post('/register', (req, res) =>{
@@ -71,9 +71,9 @@ app.post('/register', (req, res) =>{
 	const callback = (err, data)=>{
 		if(err) throw err;
 		res.redirect('/');
-	}
+	};
 
-	Student.create(newStudent, callback);
+	Students.create(newStudent, callback);
 })
 
 app.post('/students', (req, res) => {
