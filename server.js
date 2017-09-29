@@ -58,6 +58,24 @@ app.get('/', (req,res)=>{
 	// res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/register', (req, res) => {
+	res.render('regoster.ejs');
+})
+
+app.post('/register', (req, res) =>{
+	const newStudent = {
+		"studentid": req.body.studentid,
+		"firstname": req.body.firstname,
+		"lastname": req.body.lastname
+	};
+	const callback = (err, data){
+		if(err) throw err;
+		res.redirect('/');
+	}
+
+	Student.create(newStudent, callback);
+})
+
 app.post('/students', (req, res) => {
 	const newStudent = req.body;
 	const callback = (err, data)=>{
