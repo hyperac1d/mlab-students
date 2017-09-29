@@ -58,19 +58,19 @@ app.get('/', (req,res)=>{
 	// res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/register', (req, res) => {
-	res.render('register.ejs');
-})
+// app.get('/register', (req, res) => {
+// 	res.render('register.ejs');
+// })
 
-app.post('/register', (req, res) => {
-	const newStudent = req.body;
-	const callback = (err, data)=>{
-		if(err)throw err;
-		alert('Inserted to the database');
-		res.redirect('/');
-	};
-	Students.create(newStudent, callback);
-});
+// app.post('/register', (req, res) => {
+// 	const newStudent = req.body;
+// 	const callback = (err, data)=>{
+// 		if(err)throw err;
+// 		alert('Inserted to the database');
+// 		res.redirect('/');
+// 	};
+// 	Students.create(newStudent, callback);
+// });
 
 app.post('/students', (req, res) => {
 	const newStudent = req.body;
