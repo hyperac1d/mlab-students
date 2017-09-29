@@ -30,7 +30,7 @@ const studentSchema = new mongoose.Schema({
 	firstname: 'string',
 	lastname: 'string'
 });
- const uri = "mongodb://admin:admin@ds155424.mlab.com:55424/accountdb";
+ const uri = "mongodb://admin:admin@ds147274.mlab.com:47274/databasedemo";
 // const uri = process.env.DB_URI;
 const options = {
 	useMongoClient: true,
