@@ -68,7 +68,7 @@ app.post('/register', (req, res) =>{
 		"firstname": req.body.firstname,
 		"lastname": req.body.lastname
 	};
-	const callback = (err, data){
+	const callback = (err, data)=>{
 		if(err) throw err;
 		res.redirect('/');
 	}
